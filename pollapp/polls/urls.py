@@ -18,8 +18,15 @@ from django.urls import path
 
 from polls import views
 
+app_name = 'polls'
+
 urlpatterns = [
     # polls Endpoints
     path('', views.index, name='index'),
+    # ex: /polls/5/
+    path('<int:question_id>/', views.details, name='poll_details'),
+    path('<int:question_id>/vote/', views.vote, name='vote'),
+    path('<int:question_id>/results/', views.results, name='results'),
+
     path('json', views.json_test_handler, name='json_test')
 ]
