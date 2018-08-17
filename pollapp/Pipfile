@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+pylint = "*"
+"pep8" = "*"
+
+[packages]
+django = "*"
+mysqlclient = "*"
+ipdb = "*"
+django-extensions = "*"
+
+[requires]
+python_version = "3.5"
