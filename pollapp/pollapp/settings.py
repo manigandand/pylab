@@ -30,17 +30,21 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
+PRE_REQ_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Apps
+]
+
+ADDITIONAL_APPS = [
     'polls.apps.PollsConfig',
     'django_extensions',
 ]
+
+INSTALLED_APPS = PRE_REQ_APPS + ADDITIONAL_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
