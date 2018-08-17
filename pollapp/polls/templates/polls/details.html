@@ -1,3 +1,7 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+
 <h1>{{ question.question_text }}</h1>
 <h3>{{ question.pub_date }}</h3>
 {% if error_message %}<p><strong style="color: red">{{ error_message }}</strong></p>{% endif %}
